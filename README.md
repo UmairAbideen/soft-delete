@@ -50,7 +50,7 @@ $table->softDeletes(); // Adds deleted_at timestamp
 Then migrate:
 
 php artisan migrate
-```bash
+```
 
 2️⃣ Use the SoftDeletes Trait in the Model
 
