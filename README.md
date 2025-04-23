@@ -1,4 +1,4 @@
-# 🗑️ Laravel 10 Soft Delete Example
+# 🗑️ Laravel 10 Soft Delete
 
 This project demonstrates how to implement **Soft Delete** functionality in Laravel using Eloquent’s built-in `SoftDeletes` trait. Instead of permanently deleting records from the database, soft deletes allow you to mark data as "trashed" and optionally restore it later.
 
