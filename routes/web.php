@@ -13,3 +13,5 @@ Route::get('/trashed', [UserController::class, 'trashed'])->name('users.trashed'
 Route::post('/force-delete/{id}', [UserController::class, 'forceDelete'])->name('users.forceDelete');
 
 Route::post('/restore/{id}', [UserController::class, 'restore'])->name('users.restore');
+
+Route::post('/users', [UserController::class, 'store'])->name('users.store');

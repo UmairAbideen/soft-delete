@@ -10,7 +10,32 @@
 </head>
 
 <body>
+
+
     <div class="container mt-5">
+
+        <h4>Add New User</h4>
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+        <form action="{{ route('users.store') }}" method="POST" class="mb-4">
+            @csrf
+            <div class="row mb-2">
+                <div class="col">
+                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                </div>
+                <div class="col">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col">
+                    <input type="number" name="age" class="form-control" placeholder="Age" required>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-success">Add User</button>
+                </div>
+            </div>
+        </form>
+
         <h2>All Users</h2>
         <table class="table table-bordered">
             <thead>

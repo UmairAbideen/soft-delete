@@ -46,4 +46,17 @@ class UserController extends Controller
         $user->restore();
         return redirect()->route('users.trashed')->with('success', 'User restored successfully');
     }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'age' => 'required|numeric|min:0'
+        ]);
+
+        User::create($validated);
+
+        return redirect()->route('users.index')->with('success', 'User created successfully!');
+    }
 }
